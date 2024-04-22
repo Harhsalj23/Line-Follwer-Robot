@@ -5,6 +5,10 @@ This repository contains code and schematics for building a line follower robot 
 ![image](https://github.com/Harhsalj23/Line-Follwer-Robot/assets/148116081/174877be-06cf-4167-8d93-401dc7649a2e)
 
 
+https://github.com/Harhsalj23/Line-Follwer-Robot/assets/148116081/e9b43327-6dbb-41a6-bf26-ad2938d85562
+
+
+
 
 ## Components
 - Arduino Uno
