@@ -2,8 +2,9 @@
 # Line Follwer Robot
 This repository contains code and schematics for building a line follower robot using Arduino.The robot uses infrared sensors to detect a black line on a white surface (or vice versa) and steers itself to follow the line.
 
-https://photos.fife.usercontent.google.com/pw/AP1GczNvTUyp3JAJ4NxSWfh5hJ0SxJVDhs6jIcRL1EcROfnD13O4nDhTsacW=w741-h988-s-no-gm?authuser=1
-https://photos.app.goo.gl/29RywdnDYgbTH42d8
+![image](https://github.com/Harhsalj23/Line-Follwer-Robot/assets/148116081/174877be-06cf-4167-8d93-401dc7649a2e)
+
+
 
 ## Components
 - Arduino Uno
