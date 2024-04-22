@@ -1,0 +1,98 @@
+int motor1a = 2;
+int motor1b = 4;
+int motor1enable = 3;
+
+int motor2a = 7;
+int motor2b = 8;
+int motor2enable = 6;
+
+int ir_output1 = 10;
+int ir_output2 =11;
+
+
+void setup() {
+  Serial.begin(9600);
+
+pinMode(motor1a, OUTPUT);
+pinMode(motor1b,OUTPUT);
+
+pinMode(motor2a,OUTPUT);
+pinMode(motor2b,OUTPUT);
+
+pinMode(motor1enable,OUTPUT);
+pinMode(motor2enable,OUTPUT);
+
+pinMode(ir_output1,INPUT);
+pinMode(ir_output2,INPUT);
+
+
+ digitalWrite( motor2enable , HIGH);
+ digitalWrite( motor1enable , HIGH);
+
+}
+
+void forward1(){
+  analogWrite ( motor1enable,60);
+ // analogWrite ( motor2enable,100);
+  digitalWrite( motor1a , HIGH);
+  digitalWrite( motor1b ,LOW);
+
+    digitalWrite( motor2a ,LOW);
+  digitalWrite( motor2b ,LOW);
+ // digitalWrite( motor1enable , HIGH);
+}
+
+void forward2(){
+   analogWrite ( motor2enable,60);
+  digitalWrite( motor2a ,HIGH);
+  digitalWrite( motor2b ,LOW);
+
+   digitalWrite( motor1a , LOW);
+  digitalWrite( motor1b ,LOW);
+   //delay(1000);
+}
+
+
+void stop1(){
+ digitalWrite( motor1enable , 00);
+    digitalWrite( motor1a ,LOW);
+  digitalWrite( motor1b ,LOW);
+}
+
+void stop2(){
+   analogWrite ( motor2enable,00);
+  digitalWrite( motor2a ,LOW);
+  digitalWrite( motor2b ,LOW);
+  // digitalWrite( motor2enable , LOW);
+}
+
+
+void loop() {
+
+//*MAIN CODE******
+
+ if((digitalRead(ir_output1)==0) && (digitalRead(ir_output2)==0)){
+  
+   forward1();
+   forward2();
+  }
+
+  else if((digitalRead(ir_output1)==1) && (digitalRead(ir_output2)==0)){
+  
+   forward1();
+   stop2();
+  }
+
+  else if((digitalRead(ir_output1)==0) && (digitalRead(ir_output2)==1)){
+
+   stop1();
+   forward2();
+  
+  }
+
+  else{
+  
+  stop1();
+  stop2();
+  }
+}
